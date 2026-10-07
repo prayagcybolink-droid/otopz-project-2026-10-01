@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#141413"/>
+  <!-- Baseline Typography Specimen Guides -->
+  <line x1="60" y1="110" x2="740" y2="110" stroke="#FF4F18" stroke-width="1" stroke-dasharray="6 6" opacity="0.7"/>
+  <line x1="60" y1="310" x2="740" y2="310" stroke="#FF4F18" stroke-width="1" stroke-dasharray="6 6" opacity="0.7"/>
+  <text x="64" y="96" fill="#FF4F18" font-family="monospace" font-size="11">CAP HEIGHT // 720 UPM — OPTICAL KERNING</text>
+  <!-- Giant Aa Specimen -->
+  <text x="64" y="305" fill="#FAF8F5" font-family="Georgia, serif" font-size="230" font-weight="bold">Aa</text>
+  <text x="385" y="210" fill="#F3EFEA" font-family="sans-serif" font-size="44" font-weight="bold">Neue Grotesque</text>
+  <text x="385" y="258" fill="#918E86" font-family="Georgia, serif" font-size="28" font-style="italic">&amp; 1,400 Vector Glyphs</text>
+  <rect x="385" y="280" width="170" height="32" rx="6" fill="#FF4F18"/>
+  <text x="403" y="301" fill="#FFFFFF" font-family="monospace" font-size="12" font-weight="bold">OTF / WOFF2 / SVG</text>
+  <!-- Icon Grid Strip at bottom -->
+  <rect x="64" y="350" width="672" height="90" rx="8" fill="#1E1D1B" stroke="#33312E"/>
+  <circle cx="120" cy="395" r="20" fill="none" stroke="#FAF8F5" stroke-width="2"/>
+  <path d="M 112 395 L 128 395 M 120 387 L 120 403" stroke="#FF4F18" stroke-width="2"/>
+  <rect x="180" y="375" width="40" height="40" rx="6" fill="none" stroke="#FAF8F5" stroke-width="2"/>
+  <polygon points="280,375 304,415 256,415" fill="none" stroke="#6EE7B7" stroke-width="2"/>
+  <text x="350" y="392" fill="#FAF8F5" font-family="monospace" font-size="13">18 WEIGHTS + VARIABLE AXIS</text>
+  <text x="350" y="414" fill="#918E86" font-family="monospace" font-size="12">COMMERCIAL FOUNDRY LICENSE INCLUDED</text>
+</svg>

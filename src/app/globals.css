@@ -1,0 +1,235 @@
+@import "tailwindcss";
+
+/* Splatink by Måns Grebäck — brand logo typeface */
+@font-face {
+  font-family: "Splatink";
+  src: url("/fonts/Splatink.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-splatink {
+  font-family: "Splatink", var(--font-display), sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: #FFFFE3;
+    color: #0A0A0A;
+    font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-display, .font-display {
+    font-family: var(--font-display), var(--font-body), sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-mono-spec {
+    font-family: var(--font-body), sans-serif;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.01em;
+  }
+
+  button, a, input, select, textarea {
+    transition: color .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease, opacity .2s ease;
+  }
+
+  button:active:not(:disabled) { transform: scale(.97); }
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: .4; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(.94) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(20px) scale(.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-14px) rotate(1.5deg); }
+}
+@keyframes orbDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(40px, -30px) scale(1.1); }
+  66%      { transform: translate(-30px, 20px) scale(.95); }
+}
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0 rgba(10, 10, 10, .35); }
+  70%  { box-shadow: 0 0 0 10px rgba(10, 10, 10, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(10, 10, 10, 0); }
+}
+@keyframes growBar {
+  from { width: 0; }
+}
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+@keyframes popBadge {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.45); }
+  100% { transform: scale(1); }
+}
+
+/* ---------- Utility classes ---------- */
+.anim-fade-up   { animation: fadeUp .6s cubic-bezier(.22,1,.36,1) both; }
+.anim-fade-in   { animation: fadeIn .4s ease both; }
+.anim-scale-in  { animation: scaleIn .35s cubic-bezier(.22,1,.36,1) both; }
+.anim-slide-right { animation: slideInRight .45s cubic-bezier(.22,1,.36,1) both; }
+.anim-slide-left  { animation: slideInLeft .35s cubic-bezier(.22,1,.36,1) both; }
+.anim-toast     { animation: toastIn .35s cubic-bezier(.22,1,.36,1) both; }
+.anim-float     { animation: floatY 6s ease-in-out infinite; }
+.anim-orb       { animation: orbDrift 14s ease-in-out infinite; }
+.anim-pulse-ring{ animation: pulseRing 2.2s ease-out infinite; }
+.anim-grow-bar  { animation: growBar 1.1s cubic-bezier(.22,1,.36,1) both; }
+.anim-spin-slow { animation: spinSlow 18s linear infinite; }
+.anim-pop       { animation: popBadge .4s cubic-bezier(.22,1,.36,1); }
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+.shimmer {
+  background: linear-gradient(90deg, #E8E2D8 0%, #FFFFE3 50%, #E8E2D8 100%);
+  background-size: 1200px 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+/* Stagger helper: apply .stagger to a parent, children get incremental delays */
+.stagger > * { animation: fadeUp .6s cubic-bezier(.22,1,.36,1) both; }
+.stagger > *:nth-child(1)  { animation-delay: .04s; }
+.stagger > *:nth-child(2)  { animation-delay: .10s; }
+.stagger > *:nth-child(3)  { animation-delay: .16s; }
+.stagger > *:nth-child(4)  { animation-delay: .22s; }
+.stagger > *:nth-child(5)  { animation-delay: .28s; }
+.stagger > *:nth-child(6)  { animation-delay: .34s; }
+.stagger > *:nth-child(7)  { animation-delay: .40s; }
+.stagger > *:nth-child(8)  { animation-delay: .46s; }
+.stagger > *:nth-child(9)  { animation-delay: .52s; }
+.stagger > *:nth-child(n+10) { animation-delay: .58s; }
+
+/* Card lift & tilt */
+.card-lift {
+  transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease, border-color .25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 40px -18px rgba(10, 10, 10, .25);
+}
+
+/* Underline sweep for text links */
+.link-sweep {
+  background-image: linear-gradient(#0A0A0A, #0A0A0A);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size .3s ease;
+}
+.link-sweep:hover { background-size: 100% 2px; }
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(120deg, #0A0A0A 0%, #6B6B6B 50%, #0A0A0A 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 8s ease infinite;
+}
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+/* Grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(10,10,10,.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10,10,10,.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #FFFFE3; }
+::-webkit-scrollbar-thumb { background: #CFCFCF; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #8A8A8A; }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity .9s cubic-bezier(.22,1,.36,1), transform .9s cubic-bezier(.22,1,.36,1); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Letter rise for giant wordmark */
+@keyframes letterRise {
+  from { transform: translateY(110%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+.letter-rise { display: inline-block; animation: letterRise 1s cubic-bezier(.22,1,.36,1) both; }
+
+@keyframes heroFill {
+  from { opacity: 0; transform: scale(1.06); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.hero-fill { animation: heroFill 1.6s cubic-bezier(.22,1,.36,1) both; will-change: transform, opacity; }
+
+@keyframes lineGrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.line-grow { transform-origin: left; animation: lineGrow 1s cubic-bezier(.22,1,.36,1) both; }
+
+.img-zoom img { transition: transform 1s cubic-bezier(.22,1,.36,1), filter .6s ease; }
+.img-zoom:hover img { transform: scale(1.07); }
+
+.arrow-nudge svg { transition: transform .3s ease; }
+.arrow-nudge:hover svg { transform: translateX(4px); }
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

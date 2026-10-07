@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#F3EFEA"/>
+  <!-- Architectural Grid Lines -->
+  <line x1="0" y1="90" x2="800" y2="90" stroke="#E5E0D8" stroke-width="1.5"/>
+  <line x1="0" y1="410" x2="800" y2="410" stroke="#E5E0D8" stroke-width="1.5"/>
+  <line x1="120" y1="0" x2="120" y2="500" stroke="#E5E0D8" stroke-width="1.5"/>
+  <line x1="680" y1="0" x2="680" y2="500" stroke="#E5E0D8" stroke-width="1.5"/>
+  <!-- Center Editorial Canvas -->
+  <rect x="150" y="60" width="500" height="380" rx="10" fill="#FAF8F5" stroke="#141413" stroke-width="2"/>
+  <rect x="150" y="60" width="500" height="48" rx="10" fill="#141413"/>
+  <text x="176" y="90" fill="#FAF8F5" font-family="monospace" font-size="12" letter-spacing="1.5">EDITORIAL OS // EXECUTIVE SYSTEM</text>
+  <rect x="530" y="72" width="96" height="24" rx="4" fill="#FF4F18"/>
+  <text x="546" y="88" fill="#FFFFFF" font-family="monospace" font-size="11" font-weight="bold">v2.0.4 PRO</text>
+  <text x="184" y="164" fill="#141413" font-family="Georgia, serif" font-size="36" font-weight="bold">Executive Strategy</text>
+  <text x="184" y="206" fill="#141413" font-family="Georgia, serif" font-size="36" font-weight="bold">&amp; Studio Operations</text>
+  <!-- 3 Modular Blocks -->
+  <rect x="184" y="238" width="136" height="118" rx="6" fill="#F3EFEA" stroke="#E5E0D8"/>
+  <text x="200" y="266" fill="#FF4F18" font-family="monospace" font-size="11" font-weight="bold">01 / ROADMAP</text>
+  <text x="200" y="294" fill="#141413" font-family="sans-serif" font-size="13" font-weight="bold">OKR Matrix</text>
+  <text x="200" y="316" fill="#5C5A55" font-family="sans-serif" font-size="11">Quarterly cycles</text>
+  <rect x="332" y="238" width="136" height="118" rx="6" fill="#F3EFEA" stroke="#E5E0D8"/>
+  <text x="348" y="266" fill="#1F4E3D" font-family="monospace" font-size="11" font-weight="bold">02 / LEDGER</text>
+  <text x="348" y="294" fill="#141413" font-family="sans-serif" font-size="13" font-weight="bold">P&amp;L Forecast</text>
+  <text x="348" y="316" fill="#5C5A55" font-family="sans-serif" font-size="11">Automated rollups</text>
+  <rect x="480" y="238" width="136" height="118" rx="6" fill="#141413"/>
+  <text x="496" y="266" fill="#FF7A45" font-family="monospace" font-size="11" font-weight="bold">03 / ARCHIVE</text>
+  <text x="496" y="294" fill="#FAF8F5" font-family="sans-serif" font-size="13" font-weight="bold">34 Templates</text>
+  <text x="496" y="316" fill="#918E86" font-family="sans-serif" font-size="11">Instant duplicate</text>
+  <text x="184" y="398" fill="#5C5A55" font-family="monospace" font-size="12">NOTION WORKSPACE + INTERACTIVE PDF HANDBOOK</text>
+</svg>
