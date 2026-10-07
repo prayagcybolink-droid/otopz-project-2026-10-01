@@ -34,4 +34,6 @@ Import this project into Vercel as a Next.js project and configure these environ
 - `ADMIN_PASSWORD`: a unique secret password; never use the local development password in production.
 - `ADMIN_SESSION_SECRET`: a cryptographically random secret of at least 32 characters, kept stable between deployments so existing sessions remain valid until expiry.
 
+The production build does not connect to the database; `DATABASE_URL` is required at runtime for database-backed pages and API routes.
+
 Deploy with Vercel's normal Next.js build (`npm run build`). Apply schema updates to the hosted database with `npm run db:push` from a trusted environment before deploying a release that depends on new columns or tables. Do not upload `.env` or put secrets in client-side `NEXT_PUBLIC_*` variables.
